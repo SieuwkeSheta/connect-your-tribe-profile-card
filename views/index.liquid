@@ -1,14 +1,51 @@
 {% render 'partials/head.liquid' %}
 
-<article>
+<main>
+      
   <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
+    <menu>
+      <li><button id="werk">Werkervaring</button></li>
+      <li><button id="hobbies">Hobbies</button></li>
+      <li><button id="ambities">Ambities</button></li>
+    </menu>
   </header>
 
-  <p>{{ person.name }}</p>
+  <ul class="boven">
+    <li class="werk1">
+      <img src="/assets/camera.png" alt="" class="png">
+      Fotograaf  
+    </li>
+    <li class="hobbies2">
+      <img src="/assets/sewing-needle.png" alt="" class="png">
+       Handwerkjes
+    </li>
+    <li class="werk2">
+      <img src="/assets/autism.png" alt="" class="png">
+      Ervarings-deskundige Autisme
+    </li>
+  </ul>
+  
+  <img src="/assets/Squad1J-Sieuwke2.JPG" alt="" width="800" height="800" class="profile-img">
+  
+  <h1>{{ person.name }}, <span id="age"></span> <br>Amsterdam</h1>
 
-  <footer></footer>
-</article>
+  <ul class="onder">
+    <li class="hobbies3">
+      <img src="/assets/animallover2.png" alt="" class="png">
+      Dierenliefhebber 
+    </li>
+    <li class="ambities">
+      <img src="/assets/laptop.png" alt="" class="png">
+      Frontend designer & developer
+    </li>
+    <li class="hobbies1">
+      <img src="/assets/controller1.png" alt="" class="png">
+      Gamen
+    </li>
+  </ul>
+
+  <p>©2025</p>
+  
+</main>
 
 {% render 'partials/foot.liquid' %}

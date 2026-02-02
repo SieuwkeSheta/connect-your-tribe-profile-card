@@ -1,0 +1,147 @@
+/* Algemene pagina instellingen */
+* {
+  box-sizing: border-box;
+}
+
+html:has(main) {
+  height: 100vh;
+}
+
+body:has(main) {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: open sans;
+  color: #4e0028;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 30em;
+  min-width: 25em;
+  border-radius: 1rem;
+  background: linear-gradient(0deg, rgb(255, 254, 255) 40%, #fcabd5 100%);
+  box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
+  transition: .25s;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+p {
+  margin:0;
+  width: 100%;
+  margin-top: 0;
+  padding: 3rem 2rem;
+  border-radius: 0 0 1rem 1rem;
+  text-align: center;
+}
+
+/* Rij (knoppen) met Werkervaring, Hobbies en Ambities */
+header {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+menu {
+  padding: 1rem;
+  margin: 1rem;
+  list-style-type: "";
+  display: flex;
+  gap: 1rem;
+}
+
+menu button {
+  background-color: transparent;
+  color: #4e0028;
+  border: none;
+  margin: 0;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+
+
+menu button:hover {
+  color: #a14a79;
+  scale: 1.1;
+}
+
+/* Profielfoto met border */
+.profile-img {
+  width: 10em;
+  height: 10em;
+  border: 5px solid #ffffff;
+  border-radius: 10em;
+  transition: .25s .15s;
+}
+
+/* Rijen met png's en tekst */
+ul {
+  margin: 0;
+  list-style-type: "";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+ul li {
+  scale: 0;
+  transition: 1s;
+}
+
+.is-shown {
+  scale: 1;
+  }
+
+.ambities {
+  color: #fc4bb3;
+  text-shadow: 1px 0.1px black;
+}
+
+.png {
+  width: 5rem;
+}
+
+.boven {
+  li:nth-of-type(1){
+    rotate: -15deg;
+    margin-bottom: -2rem;
+  }
+  li:nth-of-type(2){
+    margin-bottom: 2rem;
+  }
+  li:nth-of-type(3){
+    rotate: 15deg;
+    margin-bottom: -2rem;
+  }
+ }
+
+.onder {
+  margin:0;
+
+  li:nth-of-type(1){
+    rotate: 15deg;
+    margin-top: -2rem;
+  }
+  li:nth-of-type(2){
+    margin-bottom: -2rem;
+  }
+  li:nth-of-type(3){
+    rotate: -15deg;
+    margin-top: -2rem;
+  }
+}
