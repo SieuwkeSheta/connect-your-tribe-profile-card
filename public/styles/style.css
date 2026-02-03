@@ -82,6 +82,13 @@ body {
     font-weight: 700;
   }
 
+  /* Text 'ik ben een 1e jaars frontend student' */
+  p.i-am-text {
+    display: grid;
+    padding-block: 1em;
+    font-weight: 700;
+    font-size: var(--font-size-l);
+  }
 
 
 
