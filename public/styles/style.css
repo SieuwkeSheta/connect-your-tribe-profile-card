@@ -173,6 +173,8 @@ body {
   }
 }
 
+
+
 /* Achterkant visitekaart */
 .card-back {
   position: absolute;
@@ -185,6 +187,32 @@ body {
   box-shadow: var(--background-box-shadow);
   transition: 3s;
   transform: rotateY(180deg);
+  /* Filter knoppen */
+  menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: "";
+    padding: 3em 0;
+
+    button {
+      background-color: transparent;
+      border: 1px solid transparent;
+      color: var(--text-main-color);
+      
+      font-weight: 600;
+      font-size: var(--font-size-s);
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: 2px solid underline;
+        text-underline-offset: 2px;
+      }
+
+      &:active {
+        color: var(--text-accent-color);
+      }
+    }
   }
 
 
