@@ -150,6 +150,10 @@ body {
       }
     }
   }
+
+  .copyright {
+    padding-top: 1em;
+  }
 }
 
 /* Typing animatie van text */
