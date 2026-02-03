@@ -70,6 +70,17 @@ body {
   text-align: center;
 
 
+  /* Profiel foto */
+  img {
+    width: 10em;
+    border-radius: 50%;
+    border: 5px solid var(--light-color);
+  }
+
+  hgroup {
+    font-size: var(--font-size-heading-m);
+    font-weight: 700;
+  }
 
 
 
