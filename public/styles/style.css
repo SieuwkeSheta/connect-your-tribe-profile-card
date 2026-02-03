@@ -215,6 +215,26 @@ body {
     }
   }
 
+  /* Algemene styling van de filter items */
+  ul {
+    list-style: "";
+    padding: 0;
+    display: flex;
+    gap: 1em;
+    position: absolute;
+    top: 50dvh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-weight: 550;
+    scale: 0;
+    transition: 2s;
+
+    li {
+      display: grid;
+      text-align: center;
+      width: 5em;
+    }
 
 
   }
