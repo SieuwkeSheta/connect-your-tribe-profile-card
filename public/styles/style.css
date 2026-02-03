@@ -241,6 +241,9 @@ body {
     }
   }
 
+  .ambitions {
+    color: var(--text-accent-color);
+    text-shadow: 1px 0.1px black;
   }
   }
   }
