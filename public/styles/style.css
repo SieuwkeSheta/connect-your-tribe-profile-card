@@ -52,8 +52,21 @@ html {
 body {
   position: relative;
 }
+.card {
+  position: relative;
 }
 
+/* Voorkant visitekaart */
+.card-front {
+  z-index: 1;
+  position: absolute;
+  inset: 2em 1em 1em;
+  height: 65dvh;
+  padding: 1em;
+
+  border-radius: 10px;
+  background: var(--background-color);
+  box-shadow: var(--background-box-shadow);
   text-align: center;
 
 
