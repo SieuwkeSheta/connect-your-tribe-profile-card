@@ -1,8 +1,5 @@
 {% render 'partials/head.liquid' %}
 
-<main>
-      
-  <header>
 <main class="card">
 
   {% comment %} Voorkant visitekaart {% endcomment %}
@@ -32,49 +29,56 @@
 
     <p>©2026</p>
   </section>
+
+  {% comment %} Achterkant visitekaart {% endcomment %}
+  <section>
+    <h2>Bio</h2>
+
+    <p>{{ person.bio }}</p>
+
     <menu>
-      <li><button id="werk">Werkervaring</button></li>
+      <li><button id="ambitions">Ambities</button></li>
+      <li><button id="work">Werkervaring</button></li>
       <li><button id="hobbies">Hobbies</button></li>
-      <li><button id="ambities">Ambities</button></li>
     </menu>
-  </header>
 
-  <ul class="boven">
-    <li class="werk1">
-      <img src="/assets/camera.png" alt="" class="png">
-      Fotograaf  
-    </li>
-    <li class="hobbies2">
-      <img src="/assets/sewing-needle.png" alt="" class="png">
-       Handwerkjes
-    </li>
-    <li class="werk2">
-      <img src="/assets/autism.png" alt="" class="png">
-      Ervarings-deskundige Autisme
-    </li>
-  </ul>
-  
-  <img src="/assets/Squad1J-Sieuwke2.JPG" alt="" width="800" height="800" class="profile-img">
-  
-  <h1>{{ person.name }}, <span id="age"></span> <br>Amsterdam</h1>
+    {% comment %} Lijst met ambities {% endcomment %}
+    <ul class="ambitions">
+      <li>
+        <img src="/assets/laptop.png" alt="Tekening van een laptop" width="150">
+        Frontend designer & developer
+      </li>
+    </ul>
 
-  <ul class="onder">
-    <li class="hobbies3">
-      <img src="/assets/animallover2.png" alt="" class="png">
-      Dierenliefhebber 
-    </li>
-    <li class="ambities">
-      <img src="/assets/laptop.png" alt="" class="png">
-      Frontend designer & developer
-    </li>
-    <li class="hobbies1">
-      <img src="/assets/controller1.png" alt="" class="png">
-      Gamen
-    </li>
-  </ul>
+    {% comment %} Lijst met werkervaringen {% endcomment %}
+    <ul class="work">
+      <li>
+        <img src="/assets/camera.png" alt="Tekening van een camera" width="150">
+        Fotograaf
+      </li>
+      <li>
+        <img src="/assets/autism.png" alt="Autisme infinity logo" width="150">
+        Ervarings-deskundige Autisme
+      </li>
+    </ul>
 
-  <p>©2025</p>
-  
+    {% comment %} Lijst met hobbies {% endcomment %}
+    <ul class="hobbies">
+      <li>
+        <img src="/assets/animalheart.png" alt="Tekening van een hart met een dierenpootje" width="150">
+        Dierenliefhebber
+      </li>
+      <li>
+        <img src="/assets/controller1.png" alt="Tekening van een gamecontroler" width="150">
+        Gamen
+      </li>
+      <li>
+        <img src="/assets/sewing-needle.png" alt="Tekening van naald en draad" width="150">
+        Handwerkjes
+      </li>
+    </ul>
+  </section>
+
 </main>
 
 {% render 'partials/foot.liquid' %}
