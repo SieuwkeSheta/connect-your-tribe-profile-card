@@ -68,6 +68,7 @@ body {
   background: var(--background-color);
   box-shadow: var(--background-box-shadow);
   text-align: center;
+  transition: 3s;
 
   /* Als er op de flip knop is geklikt  */
   &.is-flipped {
