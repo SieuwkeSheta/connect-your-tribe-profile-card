@@ -173,6 +173,18 @@ body {
   }
 }
 
+/* Achterkant visitekaart */
+.card-back {
+  position: absolute;
+  inset: 2em 1em 1em;
+  height: 65dvh;
+  padding: 1.5em;
+
+  border-radius: 10px;
+  background: var(--background-color);
+  box-shadow: var(--background-box-shadow);
+  transition: 3s;
+  transform: rotateY(180deg);
   }
 
 
