@@ -248,8 +248,43 @@ body {
   }
   }
 
+}
 
+
+
+/* Flip knop */
+.flip-card-button {
+  position: absolute;
+  right: 1em;
+  top: 73dvh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: var(--text-main-color);
+  font-weight: 600;
+  
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    scale: 1.1;
+    translate: 0.5em 0;
   }
+
+  &:active {
+    color: var(--text-accent-color); 
+
+    svg {
+      fill: var(--text-accent-color);
+    }
   }
+
+  svg {
+    fill: var(--text-main-color);
   }
 }
