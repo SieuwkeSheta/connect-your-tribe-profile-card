@@ -1,27 +1,21 @@
-/* Rij (knoppen) met Werkervaring, Hobbies en Ambities */
-let werkButton = document.querySelector('#werk')
+// Kaart flippen
+// Stap 1: Selecteer de voor- en achterkant van de visitekaart
+// + de flip knop
+const frontCard = document.querySelector('.card-front')
+const BackCard = document.querySelector('.card-back')
+const flipButton = document.querySelector('.flip-card-button')
 
-werkButton.addEventListener('click', function() {
-  console.log("werk");
-  document.querySelector(".werk1").classList.toggle('is-shown')
-  document.querySelector(".werk2").classList.toggle('is-shown')
-})
 
-let hobbiesButton = document.querySelector('#hobbies')
+// Stap 2: Wacht tot op elke knop gedrukt wordt
+flipButton.addEventListener('click', flipCard)
 
-hobbiesButton.addEventListener('click', function() {
-  console.log("hobbies");
-  document.querySelector(".hobbies1").classList.toggle('is-shown')
-  document.querySelector(".hobbies2").classList.toggle('is-shown')
-  document.querySelector(".hobbies3").classList.toggle('is-shown')
-})
+function flipCard() {
+  // Stap 3: Voeg een class toe om de kaart te flippen
+  frontCard.classList.toggle('is-flipped')
+  BackCard.classList.toggle('is-flipped')
+}
 
-let ambitiesButton = document.querySelector('#ambities')
 
-ambitiesButton.addEventListener('click', function() {
-  console.log("ambities");
-  document.querySelector(".ambities").classList.toggle('is-shown')
-})
 
 // Automatisch leeftijd aanpassen
 var dob = new Date("07/02/1998");
