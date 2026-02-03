@@ -88,6 +88,32 @@ body {
     padding-block: 1em;
     font-weight: 700;
     font-size: var(--font-size-l);
+
+    /* Cursor na text */
+    span {
+      position: relative;
+      color: var(--text-accent-color);
+      align-self: center;
+      justify-self: center;
+      width: fit-content;
+
+      /* Laat animatie zien als er geen voorkeur is opgegeven voor minder bewegingen op het scherm */
+      @media (prefers-reduced-motion: no-preference) {
+        /* Cursor en typing effect */
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          right: 0;
+          background-color: var(--light-color);
+
+          border-left: 1px solid;
+          animation: --cursor 1s infinite, --typing 30s steps(14) infinite;
+        }
+      }
+      
+    }
   }
 
 
