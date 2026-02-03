@@ -69,6 +69,11 @@ body {
   box-shadow: var(--background-box-shadow);
   text-align: center;
 
+  /* Als er op de flip knop is geklikt  */
+  &.is-flipped {
+    transform: rotateY(180deg);
+    z-index: 0;
+  } 
 
   /* Profiel foto */
   img {
@@ -187,6 +192,14 @@ body {
   box-shadow: var(--background-box-shadow);
   transition: 3s;
   transform: rotateY(180deg);
+
+  /* Als er op de flip knop is geklikt  */
+  &.is-flipped {
+    backface-visibility: hidden;
+    transform: rotateY(0);
+    z-index: 1;
+  } 
+
   /* Filter knoppen */
   menu {
     display: flex;
