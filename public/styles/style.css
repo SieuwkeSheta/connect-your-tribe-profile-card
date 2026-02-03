@@ -116,8 +116,40 @@ body {
     }
   }
 
+  /* Social media links */
+  a {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0.5em;
 
+    text-decoration: none;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--text-main-color);
 
+    svg {
+      width: 2em;
+      fill: var(--text-main-color);
+    }
+
+    &:hover {
+      color: var(--link-hover);
+
+      svg {
+        fill: var(--link-hover);
+      }
+    }
+
+    &:active {
+      color: var(--text-accent-color);
+
+      svg {
+        fill: var(--text-accent-color);
+      }
+    }
+  }
 }
 
 /* Typing animatie van text */
