@@ -226,6 +226,13 @@ body {
       &:active {
         color: var(--text-accent-color);
       }
+
+      /* Als een filter knop aangeklikt is */
+      &.is-clicked {
+        color: var(--text-accent-color);
+        text-decoration: 2px solid underline;
+        text-underline-offset: 2px;
+      }
     }
   }
 
@@ -258,8 +265,19 @@ body {
   .ambitions {
     color: var(--text-accent-color);
     text-shadow: 1px 0.1px black;
+
+    &.is-clicked {
+      scale: 1;
+    }
   }
+
+  .work.is-clicked {
+    scale: 1;
+    gap: 4em;
   }
+
+  .hobbies.is-clicked {
+    scale: 1;
   }
 
 }
