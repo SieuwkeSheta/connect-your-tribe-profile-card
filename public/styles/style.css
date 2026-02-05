@@ -54,6 +54,10 @@ html {
   display: flex;
   justify-content: center;
   padding: 1.5em;
+
+  @media (min-width: 800px) {
+    padding-top: 5em;
+  }
 }
 
 /* Binnenkant visitekaart die voor- en achterkant flipt */
