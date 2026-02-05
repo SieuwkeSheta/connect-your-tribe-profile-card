@@ -308,6 +308,7 @@ html {
 
     @media (min-width: 800px) {
       bottom: 1em;
+      gap: 4em;
     }
 
     li {
@@ -332,7 +333,6 @@ html {
 
   .work.is-clicked {
     scale: 1;
-    gap: 4em;
   }
 
   .hobbies.is-clicked {
