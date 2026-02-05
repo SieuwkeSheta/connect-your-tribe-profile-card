@@ -9,11 +9,12 @@
     <section class="card-front">
       <img src="/assets/Squad1J-Sieuwke2.JPG" alt="" width="200" class="profile-img">
 
+      {% comment %} Naam, leeftijd en woonplaats {% endcomment %}
       <hgroup>
         <h1>{{ person.name }}, {{ age }}</h1>
         <p>{{ person.custom.residence }}</p>
       </hgroup>
-
+      
       <p class="i-am-text">Ik ben een <span>1e jaars Frontend student</span></p>
 
       {% comment %} Wrapper met social media links {% endcomment %}
