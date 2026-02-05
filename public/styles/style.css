@@ -162,13 +162,26 @@ html {
     }
   }
 
+  /* Wrapper met social media links */
+  ul {
+    list-style: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    gap: 1em;
+
+    @media (min-width: 800px) {
+      padding-top: 0;
+    }
+  }
+
   /* Social media links */
   a {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1em 0.5em;
 
     text-decoration: none;
     font-size: var(--font-size-xs);
