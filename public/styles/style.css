@@ -260,6 +260,10 @@ html {
     list-style: "";
     padding: 3em 0;
 
+    @media (min-width: 800px) {
+      padding: 1em 0;
+    }
+
     button {
       background-color: transparent;
       border: 1px solid transparent;
