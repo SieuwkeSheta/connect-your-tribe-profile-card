@@ -298,13 +298,17 @@ html {
     display: flex;
     gap: 1em;
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     
     font-weight: 550;
     scale: 0;
     transition: 2s;
+
+    @media (min-width: 800px) {
+      bottom: 1em;
+    }
 
     li {
       display: grid;
