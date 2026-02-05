@@ -363,7 +363,7 @@ html {
   &:hover {
     cursor: pointer;
     scale: 1.1;
-    translate: 0.5em 0;
+    margin-left: 51%;
   }
 
   &:active {
