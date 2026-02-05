@@ -1,0 +1,15 @@
+{% render 'partials/head.liquid' %}
+
+<h1>Data-Driven Web</h1>
+<p>Ik ben dus {{ person.name }}</p>
+{% render 'partials/foot.liquid' %}
+
+{{ person| json}}
+
+
+<p>Het is vandaag {{ 'now' | date: '%b %d ' }}</p>
+<p>{{ age }}</p>
+
+{{ person.birthdate  }}
+
+{{ person.custom.residence }}

@@ -48,6 +48,14 @@ app.get('/', async function (request, response) {
    // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
    response.render('index.liquid', {person: personResponseJSON.data, age:calculatedAge})
 })
+
+// Maak een GET route voor de oefen-pagina
+app.get('/oefenen', async function (request, response) {
+  //  Laat calculatedAge de leeftijd uitrekenen met informatie uit de database (birthdate)
+   const calculatedAge = calcAge(personResponseJSON.data.birthdate)
+
+  // Render oefenen.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
+   response.render('practice.liquid', {person: personResponseJSON.data, age:calculatedAge})
 })
 
 // Had je meer pagina's in je oude visitekaartje? Zoals een contact.html?
