@@ -19,8 +19,6 @@ html {
   --background-color: linear-gradient(0deg, rgb(255, 255, 255) 40%, rgb(252, 171, 213) 100%);
   --background-box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.1);
 
- 
-
   /* Font maten */
   --font-size-heading-l: 2rem;
   --font-size-heading-m: 1.6rem;
@@ -49,32 +47,45 @@ html {
   }
 }
 
-body {
-  position: relative;
-}
+
+
 .card {
   position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 1.5em;
 }
+
+/* Binnenkant visitekaart die voor- en achterkant flipt */
+.card-inner {
+  position: relative;
+  width: clamp(21em, 80dvw, 30em);
+  height: clamp(32em, 70dvw, 33em);
+  transition: 3s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  box-shadow: var(--background-box-shadow);
+
+  /* background: var(--background-color); */
+
+  &.is-flipped {
+    transform: rotateY(180deg);
+  }
+}
+
+
 
 /* Voorkant visitekaart */
 .card-front {
-  z-index: 1;
   position: absolute;
-  inset: 2em 1em 1em;
-  height: 65dvh;
-  padding: 1em;
+  height: 100%;
+  width: 100%;
 
+  backface-visibility: hidden;
   border-radius: 10px;
   background: var(--background-color);
-  box-shadow: var(--background-box-shadow);
+  padding: 1em;
   text-align: center;
-  transition: 3s;
-
-  /* Als er op de flip knop is geklikt  */
-  &.is-flipped {
-    transform: rotateY(180deg);
-    z-index: 0;
-  } 
 
   /* Profiel foto */
   img {
@@ -162,7 +173,7 @@ body {
   }
 }
 
-/* Typing animatie van text */
+/* Typing animatie van text (voorkant visitekaart) */
 @keyframes --typing {
   10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
     width: 0;
@@ -172,7 +183,7 @@ body {
   }
 }
 
-/* Animatie cursor na text */
+/* Animatie cursor na text (voorkant visitekaart)*/
 @keyframes --cursor {
   100% {
     border-left: 1px solid transparent;
@@ -184,22 +195,14 @@ body {
 /* Achterkant visitekaart */
 .card-back {
   position: absolute;
-  inset: 2em 1em 1em;
-  height: 65dvh;
-  padding: 1.5em;
+  height: 100%;
+  width: 100%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
 
+  padding: 1.5em;
   border-radius: 10px;
   background: var(--background-color);
-  box-shadow: var(--background-box-shadow);
-  transition: 3s;
-  transform: rotateY(180deg);
-
-  /* Als er op de flip knop is geklikt  */
-  &.is-flipped {
-    backface-visibility: hidden;
-    transform: rotateY(0);
-    z-index: 1;
-  } 
 
   /* Filter knoppen */
   menu {
@@ -243,7 +246,7 @@ body {
     display: flex;
     gap: 1em;
     position: absolute;
-    top: 50dvh;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
     
@@ -286,14 +289,13 @@ body {
 
 /* Flip knop */
 .flip-card-button {
-  position: absolute;
-  right: 1em;
-  top: 73dvh;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.5em;
+  margin-left: 50%;
+  transform: translate(-50%);
 
   background-color: transparent;
   border: 1px solid transparent;

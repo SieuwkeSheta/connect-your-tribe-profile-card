@@ -1,8 +1,7 @@
 // Kaart flippen
-// Stap 1: Selecteer de voor- en achterkant van de visitekaart
+// Stap 1: Selecteer de binnenkant van visitekaart (waar voor- en achterkant in zit) van de visitekaart
 // + de flip knop
-const frontCard = document.querySelector('.card-front')
-const BackCard = document.querySelector('.card-back')
+const cardInner = document.querySelector('.card-inner')
 const flipButton = document.querySelector('.flip-card-button')
 
 
@@ -11,8 +10,7 @@ flipButton.addEventListener('click', flipCard)
 
 function flipCard() {
   // Stap 3: Voeg een class toe om de kaart te flippen
-  frontCard.classList.toggle('is-flipped')
-  BackCard.classList.toggle('is-flipped')
+  cardInner.classList.toggle('is-flipped')
 }
 
 
