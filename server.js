@@ -42,8 +42,12 @@ app.use(express.urlencoded({extended: true}))
 // Maak een GET route voor de index (meestal doe je dit in de root, als /)
 // In je visitekaartje was dit waarschijnlijk index.html
 app.get('/', async function (request, response) {
+  //  Laat calculatedAge de leeftijd uitrekenen met informatie uit de database (birthdate)
+   const calculatedAge = calcAge(personResponseJSON.data.birthdate)
+   
    // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
-   response.render('index.liquid', {person: personResponseJSON.data})
+   response.render('index.liquid', {person: personResponseJSON.data, age:calculatedAge})
+})
 })
 
 // Had je meer pagina's in je oude visitekaartje? Zoals een contact.html?
@@ -70,3 +74,14 @@ app.listen(app.get('port'), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
+
+// Automatisch leeftijd aanpassen
+function calcAge(birthday){
+  const dob = new Date(birthday)
+  const month_diff = Date.now() - dob.getTime();
+  const age_dt = new Date(month_diff);
+  const year = age_dt.getUTCFullYear();
+  const age = Math.abs(year - 1970);
+  
+  return age
+}
