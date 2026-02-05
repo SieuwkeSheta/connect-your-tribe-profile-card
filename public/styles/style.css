@@ -118,9 +118,14 @@ html {
     }
   }
 
+  /* Naam, leeftijd en woonplaats */
   hgroup {
     font-size: var(--font-size-heading-m);
     font-weight: 700;
+    
+    @media (min-width: 800px) {
+      padding-top: 1.5em;
+    }
   }
 
   /* Text 'ik ben een 1e jaars frontend student' */
