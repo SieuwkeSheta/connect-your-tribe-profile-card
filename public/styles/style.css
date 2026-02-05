@@ -94,6 +94,14 @@ html {
   padding: 1em;
   text-align: center;
 
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(5, auto);
+    background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgb(252, 171, 213) 100%);
+    padding-left: 2em;
+  }
+
   /* Profiel foto */
   img {
     width: 10em;
