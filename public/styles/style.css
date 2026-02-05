@@ -70,7 +70,10 @@ html {
   border-radius: 10px;
   box-shadow: var(--background-box-shadow);
 
-  /* background: var(--background-color); */
+  @media (min-width: 800px) {
+    width: 38em;
+    height: 22em;
+  }
 
   &.is-flipped {
     transform: rotateY(180deg);
