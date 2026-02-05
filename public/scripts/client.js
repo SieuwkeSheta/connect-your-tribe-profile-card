@@ -1,5 +1,5 @@
 // Kaart flippen
-// Stap 1: Selecteer de binnenkant van visitekaart (waar voor- en achterkant in zit) van de visitekaart
+// Stap 1: Selecteer de binnenkant van visitekaart (waar voor- en achterkant in zit)
 // + de flip knop
 const cardInner = document.querySelector('.card-inner')
 const flipButton = document.querySelector('.flip-card-button')
