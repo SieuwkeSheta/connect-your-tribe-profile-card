@@ -107,6 +107,15 @@ html {
     width: 10em;
     border-radius: 50%;
     border: 5px solid var(--light-color);
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.384);
+
+    @media (min-width: 800px) {
+      grid-column: 1;
+      grid-row: 1 / -1;
+      justify-self: center;
+      align-self: center;
+      width: 13em;
+    }
   }
 
   hgroup {
