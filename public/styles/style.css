@@ -155,7 +155,7 @@ html {
           background-color: var(--light-color);
 
           border-left: 1px solid;
-          animation: --cursor 1s infinite, --typing 30s steps(14) infinite;
+          animation: --cursor 1s infinite, --typing 30s steps(22) infinite;
         }
       }
       
